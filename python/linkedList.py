@@ -95,7 +95,30 @@ class LinkedList(object):
             actualNode = actualNode.nextNode;
         return None;
 
+    def findMiddleNode(self):
+        secondPointer = self.head.nextNode;
+        firstPointer = self.head
+        while secondPointer is not None:
+           # print(secondPointer.data, firstPointer.data);
+            secondPointer = secondPointer.nextNode.nextNode; 
+            firstPointer = firstPointer.nextNode
+        return firstPointer.data
 
+    def reverse(self):
+        if self.head is None:
+            return;
+
+        curNode = self.head;
+        prvNode = None;
+        nextNode = None
+
+        while curNode is not None:
+            nextNode = curNode.nextNode;
+            curNode.nextNode = prvNode
+            prvNode = curNode
+            curNode = nextNode
+
+        self.head = prvNode
 
 linklist = LinkedList();
 linklist.insertStart(100);
@@ -105,8 +128,9 @@ linklist.insertEnd(400);
 linklist.insertStart(500);
 linklist.traverse();
 print("---------------------")
-linklist.removeEnd();
-linklist.removeStart();
-linklist.traverse();
-print("---------------------")
-print(linklist.size1());
+# linklist.removeEnd();
+# linklist.removeStart();
+# linklist.traverse();
+# print("---------------------")
+# print(linklist.size1());
+#print(linklist.findMiddleNode())
