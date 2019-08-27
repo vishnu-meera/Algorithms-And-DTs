@@ -1,0 +1,47 @@
+classes ,interfaces and OOP
+==========================
+static 
+contructors
+    compiler will create a constructor default
+    contructor overloading(same name diff parameters) same name with diff signatures
+    overriding same name with diff type
+methods
+    ref
+    out 
+    params
+
+throw new ArgumentNullException("variable name")
+defensive programming
+int.TryParse("string"int number,)
+readonly
+    public
+    private
+    protected
+    internal
+    protected internal
+
+
+generics
+========
+there are 5 types of constraints
+where T : <Interface>
+Where T : <Class>
+Where T : struct <ValluType>
+Where T : class < ref type>
+
+Delegates
+=========
+A ref to a function (an object to call a function
+
+Extensions method
+=================
+
+public static class StringExtensions
+{
+    public static string Some(this string str, int noof)
+    {
+
+    }
+}
+
+Func<int,int> multiplier = n=>n*factor
