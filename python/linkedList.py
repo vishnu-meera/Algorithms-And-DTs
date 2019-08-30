@@ -1,136 +1,136 @@
 class Node(object):
     def __init__(self,data):
-        self.data = data;
-        self.nextNode = None;
+        self.data = data
+        self.nextNode = None
 
 
 class LinkedList(object):
     def __init__(self):
-        self.head = None;
-        self.size = 0;
+        self.head = None
+        self.size = 0
     #O(1)
     def size1(self):
-        return self.size;
+        return self.size
     
     #O(N)
     def size2(self):
-        size=0;
-        actualNode = self.head;
+        size=0
+        actualNode = self.head
         while actualNode is not None:
-            size+=1;
-            actualNode = actualNode.nextNode;
-        return size;
+            size+=1
+            actualNode = actualNode.nextNode
+        return size
 
     #O(1)
     def insertStart(self, data):
-        self.size = self.size+1;
-        node = Node(data);
+        self.size = self.size+1
+        node = Node(data)
         if not self.head:
-            self.head = node;
+            self.head = node
         else:
-            node.nextNode = self.head;
-            self.head = node;
+            node.nextNode = self.head
+            self.head = node
     #O(N)
     def insertEnd(self, data):
-        self.size = self.size+1;
-        node = Node(data);
-        actualNode = self.head;
+        self.size = self.size+1
+        node = Node(data)
+        actualNode = self.head
         while actualNode.nextNode is not None:
-            actualNode = actualNode.nextNode;
-        actualNode.nextNode = node;
+            actualNode = actualNode.nextNode
+        actualNode.nextNode = node
     
     #O(1)
     def removeStart(self):
         if self.head is None:
-            return;
+            return
 
         if self.size == 1:
-            self.head = None;
+            self.head = None
         else:
-            self.head = self.head.nextNode;
-        self.size = self.size-1;
+            self.head = self.head.nextNode
+        self.size = self.size-1
 
     #O(N)
     def removeEnd(self):
         if self.head is None:
-            return;
+            return
 
         if self.size == 1:
-            self.head = None;
+            self.head = None
         else:
-            actualNode = self.head;
+            actualNode = self.head
             while actualNode.nextNode.nextNode is not None:
-                actualNode = actualNode.nextNode;
-            actualNode.nextNode = None;
-        self.size = self.size-1;
+                actualNode = actualNode.nextNode
+            actualNode.nextNode = None
+        self.size = self.size-1
 
     #O(N)
     def remove(self,data):
         if self.head is None:
-            return;
+            return
 
-        self.size = self.size-1;
-        curNode = self.head;
-        prvNode = None;
+        self.size = self.size-1
+        curNode = self.head
+        prevNode = None
         while curNode.data != data:
-            prevNode = curNode;
-            curNode = curNode.nextNode;
+            prevNode = curNode
+            curNode = curNode.nextNode
         if prevNode is None:
-            self.head = curNode.nextNode;
+            self.head = curNode.nextNode
         else:
-            prevNode.nextNode = curNode.nextNode;
+            prevNode.nextNode = curNode.nextNode
 
     def traverse(self):
-        actualNode = self.head;
+        actualNode = self.head
         while actualNode is not None:
-            print(actualNode.data);
-            actualNode = actualNode.nextNode; 
+            print(actualNode.data)
+            actualNode = actualNode.nextNode 
             
-        return None;
+        return None
     def search(self,value):
-        actualNode = self.head;
+        actualNode = self.head
         while actualNode.nextNode is not None:
             if actualNode.data == value:
-                return actualNode;
-            actualNode = actualNode.nextNode;
-        return None;
+                return actualNode
+            actualNode = actualNode.nextNode
+        return None
 
     def findMiddleNode(self):
-        secondPointer = self.head.nextNode;
+        secondPointer = self.head.nextNode
         firstPointer = self.head
         while secondPointer is not None:
-           # print(secondPointer.data, firstPointer.data);
-            secondPointer = secondPointer.nextNode.nextNode; 
+           # print(secondPointer.data, firstPointer.data)
+            secondPointer = secondPointer.nextNode.nextNode
             firstPointer = firstPointer.nextNode
         return firstPointer.data
 
     def reverse(self):
         if self.head is None:
-            return;
+            return
 
-        curNode = self.head;
-        prvNode = None;
+        curNode = self.head
+        prvNode = None
         nextNode = None
 
         while curNode is not None:
-            nextNode = curNode.nextNode;
+            nextNode = curNode.nextNode
             curNode.nextNode = prvNode
             prvNode = curNode
             curNode = nextNode
 
         self.head = prvNode
 
-linklist = LinkedList();
-linklist.insertStart(100);
-linklist.insertStart(200);
-linklist.insertEnd(300);
-linklist.insertEnd(400);
-linklist.insertStart(500);
-linklist.traverse();
+linklist = LinkedList()
+linklist.insertStart(100)
+linklist.insertStart(200)
+linklist.insertEnd(300)
+linklist.insertEnd(400)
+linklist.insertStart(500)
+linklist.traverse()
 print("---------------------")
-# linklist.removeEnd();
-# linklist.removeStart();
-# linklist.traverse();
+# linklist.removeEnd()
+# linklist.removeStart()
+# linklist.traverse()
 # print("---------------------")
-# print(linklist.size1());
+# print(linklist.size1())
 #print(linklist.findMiddleNode())

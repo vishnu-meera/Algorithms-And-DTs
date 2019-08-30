@@ -45,3 +45,19 @@ public static class StringExtensions
 }
 
 Func<int,int> multiplier = n=>n*factor
+
+
+
+
+using System;
+
+namespace c_
+{
+    class program
+    {
+        static void Main(String[] args)
+        {
+            Console.WriteLine("Arrays");
+        }
+    }
+}

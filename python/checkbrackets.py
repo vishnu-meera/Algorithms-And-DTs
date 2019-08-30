@@ -9,7 +9,7 @@ class stack:
         del self.stackArray[-1]
         return data
     def len(self):
-        return len(self.stackArray);
+        return len(self.stackArray)
 
 string = "[{}{})(]"
 string1 = "[{}{}(]"
