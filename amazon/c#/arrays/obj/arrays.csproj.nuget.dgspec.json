@@ -4,6 +4,60 @@
     "D:\\algorithms\\amazon\\c#\\arrays\\arrays.csproj": {}
   },
   "projects": {
+    "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj",
+        "projectName": "LinkedList",
+        "projectPath": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj",
+        "packagesPath": "C:\\Users\\vishn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vishn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": [
+            "Microsoft.NETCore.App"
+          ]
+        }
+      }
+    },
     "D:\\algorithms\\amazon\\c#\\arrays\\arrays.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +85,11 @@
         },
         "frameworks": {
           "netcoreapp3.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj": {
+                "projectPath": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

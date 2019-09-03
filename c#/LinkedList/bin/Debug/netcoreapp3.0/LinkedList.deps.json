@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "arrays/1.0.0": {
-        "dependencies": {
-          "LinkedList": "1.0.0"
-        },
-        "runtime": {
-          "arrays.dll": {}
-        }
-      },
       "LinkedList/1.0.0": {
         "runtime": {
           "LinkedList.dll": {}
@@ -22,11 +14,6 @@
     }
   },
   "libraries": {
-    "arrays/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "LinkedList/1.0.0": {
       "type": "project",
       "serviceable": false,

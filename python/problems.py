@@ -19,6 +19,18 @@ def paliandrome(text):
             return False
     return True
 
+def reverseString(s):
+    if(len(s)>0):
+        j = len(s)-1
+        i = 0
+        while(True):
+            s[i],s[j] = s[j],s[i]
+            i = i + 1
+            j = j - 1
+            if(j<=i):
+                break
+    return s
+
 def findingDuplicatesInArray(nums):
     for num in nums:
         if nums[abs(num)]>0:

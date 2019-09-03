@@ -30,7 +30,7 @@ namespace arrays
             array.insert(5);
             array.print();
             Console.WriteLine("--------------1");
-            array.quciksort();
+            array.i_mergesort();
             array.print();
             Console.WriteLine("--------------2");
             //array.insert(11);

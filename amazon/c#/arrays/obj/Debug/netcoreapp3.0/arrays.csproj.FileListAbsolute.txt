@@ -21,3 +21,8 @@ D:\algorithms\amazon\c#\arrays\obj\Debug\netcoreapp3.0\arrays.AssemblyInfoInputs
 D:\algorithms\amazon\c#\arrays\obj\Debug\netcoreapp3.0\arrays.AssemblyInfo.cs
 D:\algorithms\amazon\c#\arrays\obj\Debug\netcoreapp3.0\arrays.dll
 D:\algorithms\amazon\c#\arrays\obj\Debug\netcoreapp3.0\arrays.pdb
+D:\algorithms\amazon\c#\arrays\bin\Debug\netcoreapp3.0\LinkedList.exe
+D:\algorithms\amazon\c#\arrays\bin\Debug\netcoreapp3.0\LinkedList.dll
+D:\algorithms\amazon\c#\arrays\bin\Debug\netcoreapp3.0\LinkedList.pdb
+D:\algorithms\amazon\c#\arrays\obj\Debug\netcoreapp3.0\arrays.csprojAssemblyReference.cache
+D:\algorithms\amazon\c#\arrays\obj\Debug\netcoreapp3.0\arrays.csproj.CopyComplete

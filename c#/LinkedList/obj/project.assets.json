@@ -1,33 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {
-      "LinkedList/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
-        "compile": {
-          "bin/placeholder/LinkedList.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LinkedList.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.NETCore.App"
-        ]
-      }
-    }
+    ".NETCoreApp,Version=v3.0": {}
   },
-  "libraries": {
-    "LinkedList/1.0.0": {
-      "type": "project",
-      "path": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj",
-      "msbuildProject": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": [
-      "LinkedList >= 1.0.0"
-    ]
+    ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
     "C:\\Users\\vishn\\.nuget\\packages\\": {},
@@ -37,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\algorithms\\amazon\\c#\\arrays\\arrays.csproj",
-      "projectName": "arrays",
-      "projectPath": "D:\\algorithms\\amazon\\c#\\arrays\\arrays.csproj",
+      "projectUniqueName": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj",
+      "projectName": "LinkedList",
+      "projectPath": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj",
       "packagesPath": "C:\\Users\\vishn\\.nuget\\packages\\",
-      "outputPath": "D:\\algorithms\\amazon\\c#\\arrays\\obj\\",
+      "outputPath": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -61,11 +39,7 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {
-            "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj": {
-              "projectPath": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

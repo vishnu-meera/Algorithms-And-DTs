@@ -1,3 +1,4 @@
+using LinkedList;
 using System;
 
 namespace arrays
@@ -133,6 +134,90 @@ namespace arrays
                 int pi = hoarePartition(low, high); //lomutoPartition(low, high);
                 qucik(low, pi - 1);
                 qucik(pi + 1, high);
+            }
+        }
+
+        public void quickSort()
+        {
+            _Stack<int> s = new _Stack<int>();
+            s.Push(0);
+            s.Push(items.Length-1);
+            while (!s.isEmpty())
+            {
+                var high = s.Pop();
+                var low = s.Pop();
+                if (low < high)
+                {
+                    int pi = hoarePartition(low, high);
+                    s.Push(low);
+                    s.Push(pi - 1);
+
+                    s.Push(pi + 1);
+                    s.Push(high);
+                }
+            }
+        }
+
+        public void mergesort()
+        {
+            mergesort(0, items.Length-1);
+        }
+        private void mergesort(int low, int high)
+        {
+            if(low < high)
+            {
+                int middle = (low + high) / 2;
+                mergesort(low, middle);
+                mergesort(middle + 1, high);
+                merge(low, middle, high);
+            }
+        }
+
+        public void i_mergesort()
+        {
+
+        }
+        private void merge(int low, int middle, int high)
+        {
+            int i, j, k;
+            T[] LeftItems = new T[middle - low + 1];
+            T[] RightItems = new T[high-middle];
+
+            for (i = 0; i < LeftItems.Length; i++)
+                LeftItems[i] = items[low + i];
+
+            for (j = 0; j < RightItems.Length; j++)
+                RightItems[j] = items[middle + 1 + j];
+
+            i = 0; j = 0; k = low;
+
+            while (i< LeftItems.Length && j<RightItems.Length)
+            {
+                if (Compare(LeftItems[i],RightItems[j])>0)
+                {
+                    items[k] = LeftItems[i];
+                    i++;
+                }
+                else
+                {
+                    items[k] = RightItems[j];
+                    j++;
+                }
+                k++;
+            }
+
+            while (i < LeftItems.Length)
+            {
+                items[k] = LeftItems[i];
+                i++;
+                k++;
+            }
+
+            while (j < RightItems.Length)
+            {
+                items[k] = RightItems[j];
+                j++;
+                k++;
             }
         }
     };
