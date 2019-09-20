@@ -187,9 +187,7 @@ class BST(object):
         if root:
             self.mirrorBST(root.leftChild)
             self.mirrorBST(root.rightChild)
-            temp = root.leftChild
-            root.leftChild = root.rightChild
-            root.rightChild = temp
+            root.leftChild,root.rightChild = root.rightChild,root.leftChild
 
     def LCA(self,root,node1,node2):
         if root is None:
@@ -228,6 +226,40 @@ class BST(object):
             root.data =  tempValue
             root.rightChild = self.removeNode(root.rightChild,tempValue)
 
+def preOrder(root):
+    stack = list()
+    s = ""
+    stack.append(root)
+    while stack:
+        temp = stack.pop()
+        if temp is not None:
+            s = s + str(temp.info) + " "
+        if temp.right is not None:
+            stack.append(temp.right)
+        if temp.left is not None:
+            stack.append(temp.left)   
+    print(s)
+a = []
+def postOrderS(root):
+    if root is not None:
+        postOrderS(root.left)
+        postOrderS(root.right)
+        a.append(str(root.info))
+
+def postOrder(root):
+    postOrderS(root)
+    print(" ".join(a))
+a = []
+def inOrderS(root):
+    if root is not None:
+        inOrderS(root.left)
+        a.append(str(root.info))
+        inOrderS(root.right)
+
+def inOrder(root):
+    inOrderS(root)
+    print(" ".join(a))
+    
 bst = BST()
 
 bst.insert(10)

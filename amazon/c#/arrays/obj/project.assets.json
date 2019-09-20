@@ -20,8 +20,8 @@
   "libraries": {
     "LinkedList/1.0.0": {
       "type": "project",
-      "path": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj",
-      "msbuildProject": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj"
+      "path": "../../../c#/LinkedList/LinkedList.csproj",
+      "msbuildProject": "../../../c#/LinkedList/LinkedList.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -64,6 +64,9 @@
           "projectReferences": {
             "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj": {
               "projectPath": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj"
+            },
+            "D:\\algorithms\\c#\\LinkedList\\LinkedList.csproj": {
+              "projectPath": "D:\\algorithms\\c#\\LinkedList\\LinkedList.csproj"
             }
           }
         }

@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-var firstUniqChar = function(s) {
+var firstUniqChar_1 = function(s) {
     const occurrences = [];
     const charCodeBase = 'a'.charCodeAt(0);
     
@@ -12,9 +12,10 @@ var firstUniqChar = function(s) {
         else 
             occurrences[s.charCodeAt(i) - charCodeBase]++;
     }
-
+    console.log(occurrences)
     for (let i = 0; i < s.length; i++){
         let p =  s.charCodeAt(i) - charCodeBase;
+        console.log(p,occurrences[p])
         if (occurrences[s.charCodeAt(i) - charCodeBase] === 1) return i;
     }
     
@@ -43,3 +44,5 @@ var firstUniqChar = function(s) {
     
     return -1;
 };
+
+firstUniqChar_1("loveleetcode")

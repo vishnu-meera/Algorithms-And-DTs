@@ -1,5 +1,64 @@
 from functools import reduce
 
+class TwoStack:
+    def __init__(self,n):
+        self.stack = [None]*n
+        self.size = n
+        self.top_1 = -1
+        self.top_2 = self.size
+         
+    def Push1(self,value):
+        if self.top_1<self.top_2 -1:
+            self.top_1 += 1
+            self.stack[self.top_1] = value
+        else:
+            print("Stack Overflow ") 
+            exit(1) 
+
+    def Push2(self,value):
+        if self.top_1<self.top_2 -1:
+            self.top_2 -= 1
+            self.stack[self.top_2] = value
+        else:
+            print("Stack Overflow ") 
+            exit(1) 
+
+    def Pop1(self):
+        if self.top_1 >= 0:
+            value = self.stack[self.top_1] 
+            self.stack[self.top_1]  = 0
+            self.top_1 -= 1
+            return value
+        else:
+            print("Stack Overflow ") 
+            exit(1) 
+            
+    def Pop2(self):
+        if self.top_2 <= self.size:
+            value = self.stack[self.top_2] 
+            self.stack[self.top_2] = 0
+            self.top_1 += 1
+            return value
+        else:
+            print("Stack Overflow ") 
+            exit(1) 
+
+
+# Driver program to test twoStacks class 
+ts = TwoStack(5) 
+ts.Push1(5) 
+ts.Push2(10) 
+ts.Push2(15) 
+ts.Push1(11) 
+ts.Push2(7) 
+print(ts.stack)
+print("Popped element from stack1 is " + str(ts.Pop1())) 
+print(ts.stack)
+ts.Push2(40) 
+print(ts.stack)
+print("Popped element from stack2 is " + str(ts.Pop2())) 
+print(ts.stack)
+
 class Stack:
 
     def __init__(self):
@@ -40,8 +99,6 @@ class Node(object):
     def __init__(self,data):
         self.data = data
         self.nextNode = None
-
-
 
 class StackLinkedList(object):
     def __init__(self):

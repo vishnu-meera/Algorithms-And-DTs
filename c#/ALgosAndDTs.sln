@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arrays", "D:\algorithms\amazon\c#\arrays\arrays.csproj", "{A978C82E-4346-49FD-95D4-97021E41FD0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{1D9E5214-8F2B-46FC-971F-4B9B916DBD83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "LinkedList\LinkedList.csproj", "{1D9E5214-8F2B-46FC-971F-4B9B916DBD83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BST", "BST\BST.csproj", "{15A0E307-CAD3-45D3-BA63-909A456EC554}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1D9E5214-8F2B-46FC-971F-4B9B916DBD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D9E5214-8F2B-46FC-971F-4B9B916DBD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D9E5214-8F2B-46FC-971F-4B9B916DBD83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A0E307-CAD3-45D3-BA63-909A456EC554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A0E307-CAD3-45D3-BA63-909A456EC554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A0E307-CAD3-45D3-BA63-909A456EC554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A0E307-CAD3-45D3-BA63-909A456EC554}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

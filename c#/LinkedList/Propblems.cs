@@ -243,5 +243,65 @@ namespace LinkedList
             else
                 return false;
         }
+
+        public char FindFirstNonRepeativeCharacter(string s)
+        {
+            var dictionary = new Dictionary<char, int>();
+            foreach(var c in s)
+            {
+                if (dictionary.ContainsKey(c))
+                    dictionary[c]++;
+                else
+                    dictionary[c] = 1;
+            }
+            foreach(var c in dictionary)
+            {
+                if (c.Value == 1)
+                    return c.Key;
+            }
+
+            return '0';
+        }
+
+
+        public int FindFirstNonRepeativeCharacterIndex(string s)
+        {
+            int codebase = 'a';
+            int[] occur = new int[26];
+            foreach (var item in s)
+            {
+                int basechar = item;
+                if (occur[basechar - codebase] == 0)
+                    occur[basechar - codebase] = 1;
+                else
+                    occur[basechar - codebase]++;
+
+            }
+
+            for (var i = 0; i < s.Length; i++)
+            {
+                int basechar = s[i];
+                if (occur[basechar - codebase] == 1)
+                    return i;
+            }
+            return -1;
+        }
+
+
+        public char FirstRepeatedCharacter(string s)
+        {
+            int codebase = 'a';
+            int[] occur = new int[26];
+            for (int i= 0;i<s.Length;i++)
+            {
+                int basechar = s[i];
+                if (occur[basechar - codebase] == 0)
+                    occur[basechar - codebase] = 1;
+                else
+                    return s[i];
+
+            }
+            return '0';
+        }
     }
 }

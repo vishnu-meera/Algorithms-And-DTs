@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj": {}
+    "D:\\algorithms\\c#\\LinkedList\\LinkedList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj": {
+    "D:\\algorithms\\c#\\LinkedList\\LinkedList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj",
+        "projectUniqueName": "D:\\algorithms\\c#\\LinkedList\\LinkedList.csproj",
         "projectName": "LinkedList",
-        "projectPath": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\LinkedList.csproj",
+        "projectPath": "D:\\algorithms\\c#\\LinkedList\\LinkedList.csproj",
         "packagesPath": "C:\\Users\\vishn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vishn\\source\\repos\\ALgosAndDTs\\LinkedList\\obj\\",
+        "outputPath": "D:\\algorithms\\c#\\LinkedList\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -43,7 +43,7 @@ namespace LinkedList
             //Console.WriteLine(s2.Peek());
 
             var probs = new Propblems();
-            Console.WriteLine(probs.ReverseString(" "));
+            Console.WriteLine(probs.FirstRepeatedCharacter("hello geeks"));
         }
     }
 }

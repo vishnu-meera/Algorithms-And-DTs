@@ -9,3 +9,15 @@ C:\Users\vishn\source\repos\ALgosAndDTs\LinkedList\obj\Debug\netcoreapp3.0\Linke
 C:\Users\vishn\source\repos\ALgosAndDTs\LinkedList\obj\Debug\netcoreapp3.0\LinkedList.AssemblyInfo.cs
 C:\Users\vishn\source\repos\ALgosAndDTs\LinkedList\obj\Debug\netcoreapp3.0\LinkedList.dll
 C:\Users\vishn\source\repos\ALgosAndDTs\LinkedList\obj\Debug\netcoreapp3.0\LinkedList.pdb
+D:\algorithms\c#\LinkedList\bin\Debug\netcoreapp3.0\LinkedList.exe
+D:\algorithms\c#\LinkedList\bin\Debug\netcoreapp3.0\LinkedList.deps.json
+D:\algorithms\c#\LinkedList\bin\Debug\netcoreapp3.0\LinkedList.runtimeconfig.json
+D:\algorithms\c#\LinkedList\bin\Debug\netcoreapp3.0\LinkedList.runtimeconfig.dev.json
+D:\algorithms\c#\LinkedList\bin\Debug\netcoreapp3.0\LinkedList.dll
+D:\algorithms\c#\LinkedList\bin\Debug\netcoreapp3.0\LinkedList.pdb
+D:\algorithms\c#\LinkedList\obj\Debug\netcoreapp3.0\LinkedList.csproj.CoreCompileInputs.cache
+D:\algorithms\c#\LinkedList\obj\Debug\netcoreapp3.0\LinkedList.AssemblyInfoInputs.cache
+D:\algorithms\c#\LinkedList\obj\Debug\netcoreapp3.0\LinkedList.AssemblyInfo.cs
+D:\algorithms\c#\LinkedList\obj\Debug\netcoreapp3.0\LinkedList.dll
+D:\algorithms\c#\LinkedList\obj\Debug\netcoreapp3.0\LinkedList.pdb
+D:\algorithms\c#\LinkedList\obj\Debug\netcoreapp3.0\LinkedList.csprojAssemblyReference.cache

@@ -1,0 +1,16 @@
+D:\algorithms\c#\BST\bin\Debug\netcoreapp3.0\BST.exe
+D:\algorithms\c#\BST\bin\Debug\netcoreapp3.0\BST.deps.json
+D:\algorithms\c#\BST\bin\Debug\netcoreapp3.0\BST.runtimeconfig.json
+D:\algorithms\c#\BST\bin\Debug\netcoreapp3.0\BST.runtimeconfig.dev.json
+D:\algorithms\c#\BST\bin\Debug\netcoreapp3.0\BST.dll
+D:\algorithms\c#\BST\bin\Debug\netcoreapp3.0\BST.pdb
+D:\algorithms\c#\BST\obj\Debug\netcoreapp3.0\BST.csprojAssemblyReference.cache
+D:\algorithms\c#\BST\obj\Debug\netcoreapp3.0\BST.csproj.CoreCompileInputs.cache
+D:\algorithms\c#\BST\obj\Debug\netcoreapp3.0\BST.AssemblyInfoInputs.cache
+D:\algorithms\c#\BST\obj\Debug\netcoreapp3.0\BST.AssemblyInfo.cs
+D:\algorithms\c#\BST\obj\Debug\netcoreapp3.0\BST.dll
+D:\algorithms\c#\BST\obj\Debug\netcoreapp3.0\BST.pdb
+D:\algorithms\c#\BST\bin\Debug\netcoreapp3.0\LinkedList.exe
+D:\algorithms\c#\BST\bin\Debug\netcoreapp3.0\LinkedList.dll
+D:\algorithms\c#\BST\bin\Debug\netcoreapp3.0\LinkedList.pdb
+D:\algorithms\c#\BST\obj\Debug\netcoreapp3.0\BST.csproj.CopyComplete

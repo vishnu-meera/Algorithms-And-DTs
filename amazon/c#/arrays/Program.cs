@@ -20,19 +20,19 @@ namespace arrays
             // Console.WriteLine(ArrayToString(stringArray));
             // Console.WriteLine(ArrayToString(newArray));
 
-            var array = new _Array<int>(7);
-            array.insert(10);
-            array.insert(9);
-            array.insert(7);
-            array.insert(8);
-            array.insert(9);
-            array.insert(1);
-            array.insert(5);
-            array.print();
-            Console.WriteLine("--------------1");
-            array.i_mergesort();
-            array.print();
-            Console.WriteLine("--------------2");
+            //var array = new _Array<int>(7);
+            //array.insert(10);
+            //array.insert(9);
+            //array.insert(7);
+            //array.insert(8);
+            //array.insert(9);
+            //array.insert(1);
+            //array.insert(5);
+            //array.print();
+            //Console.WriteLine("--------------1");
+            //array.i_mergesort();
+            //array.print();
+            //Console.WriteLine("--------------2");
             //array.insert(11);
             //array.removeAt(4);
             //Console.WriteLine("--------------1");
@@ -52,6 +52,26 @@ namespace arrays
             //Console.WriteLine(array2.max());
             //Console.WriteLine("--------------4");
             //array2.print();
+
+            //var q = new Q(5);
+            //q.EnQ(1);
+            //q.EnQ(2);
+            //q.EnQ(3);
+            //q.EnQ(4);
+            //q.EnQ(5);
+            //q.print();
+            //q.DnQ();
+            //q.print();
+            //q.DnQ();
+            //q.EnQ(1);
+            //q.EnQ(2);
+            //q.print();
+
+            Dictionary<int, string> names = new Dictionary<int, string>();
+            names.Add(1, "Prasannna");
+            names.Add(2, "Vishnu");
+            Console.WriteLine(names[1]);
+            Console.WriteLine(names.GetValueOrDefault(3));
         }
     }
 }
