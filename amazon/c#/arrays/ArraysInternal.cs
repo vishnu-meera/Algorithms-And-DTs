@@ -221,4 +221,29 @@ namespace arrays
             }
         }
     };
+
+    public class Comparator
+    {
+        public bool compare(int a, int b)
+        {
+            return a == b;
+        }
+
+        public bool compare(string a, string b)
+        {
+            return a.ToLower() == b.ToLower();
+        }
+
+        public bool compare(int[] a, int[] b)
+        {
+            if (a.Length != b.Length)
+                return false;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] != b[i])
+                    return false;
+            }
+            return true;
+        }
+    }
 }
