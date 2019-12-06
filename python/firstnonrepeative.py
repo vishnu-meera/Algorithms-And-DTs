@@ -1,15 +1,15 @@
 def firstnonrepeativecharacterandindex(s):
     charcodebase = ord('a')
     occur = [None]*26
-    for char in s:
-        if occur[ord(char)-charcodebase] is None:
-            occur[ord(char)-charcodebase] = 1
+    for _ in s:
+        p = ord(_)-charcodebase
+        if occur[p] is None:
+            occur[p] = 1
         else:
-            occur[ord(char)-charcodebase] += 1
+            occur[p] += 1
     print(occur)
     for _ in range(len(s)):
         p = ord(s[_])-charcodebase
-        print(p,occur[p])
         if occur[p] == 1:
             return (_,s[_])
 
