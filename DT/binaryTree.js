@@ -36,15 +36,12 @@ class BinaryTree {
     }
   }
 
-  inOrderR() {
-    const _inOrder = root => {
-      if (!root) return;
+  inOrderR(node = this.root) {
+    if (!node) return;
 
-      _inOrder(root.left);
-      console.log("V: ", root.value);
-      _inOrder(root.right);
-    };
-    _inOrder(this.root);
+    this.inOrderR(root.left);
+    console.log("V: ", root.value);
+    this.inOrderR(root.right);
   }
 
   inOrder() {
@@ -63,32 +60,6 @@ class BinaryTree {
       rs.push(node.val);
       node = node.right; // no stack push
     }
-    return rs;
-  }
-
-  inOrderMorris() {
-    let rs = [];
-    let node = this.root;
-    while (node) {
-      let pre = node.left;
-
-      if (node.left) {
-        while (pre.right !== null && pre.right !== root) pre = pre.right;
-
-        if (!pre.right) {
-          pre.right = node;
-          node = node.left;
-        } else {
-          pre.right = null;
-          rs.push(node.val);
-          node = node.right;
-        }
-      } else {
-        rs.push(node.val);
-        node = node.right;
-      }
-    }
-
     return rs;
   }
 
@@ -114,15 +85,12 @@ class BinaryTree {
   }
 
   inOrderPredecessor(data) {}
-  predOrderR() {
-    const _preOrder = root => {
-      if (!root) return;
+  predOrderR(node = this.root) {
+    if (!node) return;
 
-      console.log("V: ", root.value);
-      _preOrder(root.left);
-      _preOrder(root.right);
-    };
-    _preOrder(this.root);
+    console.log("V: ", root.value);
+    this.predOrderR(root.left);
+    this.predOrderR(root.right);
   }
 
   predOrder() {
@@ -160,3 +128,53 @@ bt.predOrderR();
 console.log("*****---*****");
 // bt.inOrderPredecessorChange();
 // bt.inOrder();
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+var zigzagLevelOrder = function(root) {
+  const result = [];
+  if (root === null) return result;
+  const stack1 = [];
+  const stack2 = [];
+  let temp = [];
+  stack1.push(root);
+
+  while (stack1.length !== 0 || stack2.length !== 0) {
+    while (stack1.length !== 0) {
+      let x = stack1.pop();
+      if (x !== null) {
+        console.log("x ", x.val);
+        temp.push(x.val);
+        stack2.push(x.left);
+        stack2.push(x.right);
+      }
+    }
+
+    if (temp.length !== 0) result.push(temp);
+    temp = [];
+    while (stack2.length !== 0) {
+      let x = stack2.pop();
+      if (x !== null) {
+        console.log("y ", x.val);
+        temp.push(x.val);
+        stack1.push(x.right);
+        stack1.push(x.left);
+      }
+    }
+
+    if (temp.length) result.push(temp);
+    temp = [];
+  }
+
+  console.log(result);
+  return result;
+};

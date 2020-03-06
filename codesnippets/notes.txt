@@ -1,0 +1,3 @@
+Ternary search tree –
+three-way radix quicksort is isomorphic to this data structure 
+in the same way that quicksort is isomorphic to binary search trees
