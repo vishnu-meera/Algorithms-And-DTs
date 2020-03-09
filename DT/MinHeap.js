@@ -1,8 +1,12 @@
 class MinHeap {
-  constructor(size) {
-    this.heap = new Array(size);
-    this.size = 0;
-    this.capacity = size;
+  constructor(capacity) {
+    this.heap = new Array(capacity);
+    this.heapSize = 0;
+    this.capacity = capacity;
+  }
+
+  getMax() {
+    return this.heap[0];
   }
 
   swap(i, j) {
@@ -11,49 +15,49 @@ class MinHeap {
     this.heap[j] = temp;
   }
 
-  getMin() {
-    return this.heap[0];
-  }
-
   insert(value) {
-    if (this.size === this.capacity) throw new Error("Heap is full");
-    this.heap[this.size] = value;
-    this.size += 1;
-    this.fixUp(this.size - 1);
+    if (this.heapSize === this.capacity) throw new Error("Heap is full!!!");
+    this.heap[this.heapSize] = value;
+    this.heapSize += 1;
+    this.fixUp(this.heapSize - 1);
   }
 
   fixUp(index) {
-    let parent = Math.floor(index / 2);
-    if (index > 0 && this.heap[index] < this.heap[parent]) {
-      this.swap(index, parent);
-      this.fixUp(parent);
+    let parentIndex = Math.floor((index + 1) / 2) - 1;
+    if (index > 0 && this.heap[parentIndex] > this.heap[index]) {
+      this.swap(index, parentIndex);
+      this.fixUp(parentIndex);
     }
-  }
-
-  poll() {
-    let min = this.getMin();
-    let s = this.size - 1;
-    this.swap(0, s);
-    this.size = s;
-    this.fixDown(0);
-    return min;
   }
 
   fixDown(index) {
     let left = 2 * index + 1;
-    let right = 2 * index + 1;
-    let next = index;
-    if (left < this.size && this.heap[left] < this.heap[index]) next = left;
-    if (right < this.size && this.heap[right] < this.heap[left]) next = right;
-    if (next !== index) {
-      this.swap(next, index);
-      this.fixDown(next);
+    let right = 2 * index + 2;
+    let temp = index;
+    if (left < this.heapSize && this.heap[temp] > this.heap[left]) {
+      temp = left;
     }
+    if (right < this.heapSize && this.heap[left] > this.heap[right]) {
+      temp = right;
+    }
+    if (temp !== index) {
+      this.swap(temp, index);
+      this.fixDown(temp);
+    }
+  }
+
+  poll() {
+    let max = this.getMax();
+    let h = this.heapSize - 1;
+    this.swap(0, h);
+    this.heapSize = h;
+    this.fixDown(0);
+    return max;
   }
 
   heap_sort() {
     let result = [];
-    while (this.size > 0) {
+    while (this.heapSize > 0) {
       result.push(this.poll());
     }
     return result;
@@ -62,15 +66,37 @@ class MinHeap {
 
 const h = new MinHeap(11);
 
-h.insert(10);
-h.insert(20);
-h.insert(5);
-h.insert(6);
-h.insert(8);
-h.insert(22);
-h.insert(18);
-h.insert(25);
-h.insert(11);
-h.insert(30);
-h.insert(26);
-console.log(h.heap_sort());
+let x = [
+  -19,
+  -16,
+  -14,
+  -14,
+  -14,
+  -12,
+  -12,
+  -12,
+  -7,
+  -5,
+  -4,
+  -4,
+  0,
+  2,
+  7,
+  15,
+  17,
+  18,
+  20,
+  20
+];
+
+var sortedSquares = function(A) {
+  if (A === null || A.length === 0) return;
+  const squares = new MinHeap(A.length);
+  for (const a of A) {
+    let s = a * a;
+    squares.insert(s);
+  }
+  return squares.heap_sort();
+};
+
+console.log(sortedSquares(x));

@@ -66,15 +66,37 @@ class MaxHeap {
 
 const h = new MaxHeap(11);
 
-h.insert(10);
-h.insert(20);
-h.insert(5);
-h.insert(6);
-h.insert(8);
-h.insert(22);
-h.insert(18);
-h.insert(25);
-h.insert(11);
-h.insert(30);
-h.insert(26);
-console.log(h.heap_sort());
+let x = [
+  -19,
+  -16,
+  -14,
+  -14,
+  -14,
+  -12,
+  -12,
+  -12,
+  -7,
+  -5,
+  -4,
+  -4,
+  0,
+  2,
+  7,
+  15,
+  17,
+  18,
+  20,
+  20
+];
+
+var sortedSquares = function(A) {
+  if (A === null || A.length === 0) return;
+  const squares = new MaxHeap(A.length);
+  for (const a of A) {
+    let s = a * a;
+    squares.insert(s);
+  }
+  return squares.heap_sort();
+};
+
+console.log(sortedSquares(x));
